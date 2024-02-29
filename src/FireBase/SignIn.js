@@ -91,7 +91,7 @@ function SignIn() {
         <div className='flex flex-col justify-center items-center h-screen p-2 bg-[#f2f1f7]'>
             <ToastContainer />
             <div className='flex p-1'>
-                <h1 className='text-black'>{<h1 className='text-[10px] font-semibold'>{messageError}</h1>}</h1>
+                <h1 className='text-black'>{<h1 className='text-[10px] font-semibold'>{error && messageError}</h1>}</h1>
             </div>
             <div className='bg-white w-auto sm:w-[350px] md:w-[400px] lg:w-[600px] h-[380px] sm:h-[400px] md:h-[400px] lg:h-[400px] gap-1 flex flex-col items-center shadow-2xl rounded-[20px] p-2'>
                 <h1 className='text-[30px] sm:text-[35px] md:text-[38px] lg:text-[40px] text-center'>SignIn</h1>

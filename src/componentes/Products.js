@@ -13,21 +13,21 @@ function Products({ category }) {
   const [isLoading, setIsLoading] = useState(true);
   const {addToCart} = useContext(CartContext);
 
-  const fetchProducts = () => {
-    fetch(`https://dummyjson.com/products/category/${category}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.products) {
-          setProducts(data.products);
-          setIsLoading(false)
-        } else {
-          console.error("Invalid data:", data);
-        }
-      })
-      .catch(error => console.error('Error:', error));
-  };
-
+  
   useEffect(() => {
+    const fetchProducts = () => {
+      fetch(`https://dummyjson.com/products/category/${category}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.products) {
+            setProducts(data.products);
+            setIsLoading(false)
+          } else {
+            console.error("Invalid data:", data);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    };
     fetchProducts();
   }, [category]);
 

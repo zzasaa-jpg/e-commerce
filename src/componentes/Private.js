@@ -9,6 +9,8 @@ const PrivateRoutes = () => {
     setIsSignedIn(true);
   };
 
+  console.log(handleSignIn)
+
   // Check if the user is signed in
   const isAuthenticated = isSignedIn || localStorage.getItem('isSignIn');
 

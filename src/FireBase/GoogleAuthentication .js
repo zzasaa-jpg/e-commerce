@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getAuth, signOut, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, onAuthStateChanged } from "firebase/auth";
 import app from './Firebase';
 import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
@@ -29,7 +29,7 @@ function GoogleAuthentication() {
 
         // Unsubscribe when component unmounts
         return () => unsubscribe();
-    }, []);
+    }, [auth, navigate]);
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -151,16 +151,6 @@ function GoogleAuthentication() {
         }
     };
 
-    const handleSignOut = async () => {
-        try {
-            console.log("Attempting sign-out...");
-            await signOut(auth);
-            console.log("Sign-out successful!");
-            localStorage.removeItem("isSignIn");
-        } catch (error) {
-            console.error('Sign-out error:', error);
-        }
-    };
 
     const handleShow=()=>{
         setShow(!show)

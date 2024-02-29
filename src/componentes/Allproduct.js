@@ -39,8 +39,8 @@ function AllProducts() {
     navigate(`/buy/${product.title}`, { state: { product: product } });
   }
 
-  let notify = (product) => {
-    let notify = toast.success("Cart Added!",{
+  let notify = () => {
+    toast.success("Cart Added!",{
     position: "top-left"
   })
 }
@@ -73,7 +73,7 @@ function AllProducts() {
                   </div>
                   <div className='flex gap-2 px-2 text-[14px] lg:text-[18px]'>
                     <button className='bg-[#ffffff] px-1 lg:px-2 rounded-[3px] shadow-xl border border-black font-semibold hover:bg-[#e8e7e7]' onClick={() => handleNavigateBuy(product)}>buy</button>
-                    <button className='bg-[#fff] px-1 lg:px-2 rounded-[3px] shadow-xl border border-black font-semibold hover:bg-[#e8e7e7] ' onClick={() => { addToCart(product); notify(product); }}>cart</button>
+                    <button className='bg-[#fff] px-1 lg:px-2 rounded-[3px] shadow-xl border border-black font-semibold hover:bg-[#e8e7e7] ' onClick={() => { addToCart(product); notify(); }}>cart</button>
                   </div>
                 </div>
               ))}

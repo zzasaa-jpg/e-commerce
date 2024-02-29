@@ -10,22 +10,22 @@ function Search() {
     let [search, setSearch] = useState([])
     let [searchValue, SetSearchValue] = useState()
     let navigate = useNavigate()
-    let fetchSearchValues =()=>{
-        fetch(`https://dummyjson.com/products/search?q=${searchValue}`)
-        .then(response => response.json())
-        .then(data => {
-            if (Array.isArray(data.products)) {
-                setSearch(data.products);
-              } else {
-                console.error("Data is not an array");
-              }
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });  
-    }
-
+    
     useEffect(()=>{
+      let fetchSearchValues =()=>{
+          fetch(`https://dummyjson.com/products/search?q=${searchValue}`)
+          .then(response => response.json())
+          .then(data => {
+              if (Array.isArray(data.products)) {
+                  setSearch(data.products);
+                } else {
+                  console.error("Data is not an array");
+                }
+          })
+          .catch(error => {
+              console.error('Error fetching data:', error);
+          });  
+      }
         fetchSearchValues()
     },[searchValue]);
 
