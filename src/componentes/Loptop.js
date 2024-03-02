@@ -57,7 +57,7 @@ function Loptop() {
               <h1 className='text-[14px] lg:text-[16px]  '>Brand: {product.brand.substring(0,14)+"..."}</h1>
               <div className='flex justify-between items-center'>
               <h1 className='flex items-center text-[14px] lg:text-[16px]'>Price: <LiaRupeeSignSolid/> {product.price}</h1>
-              <h1 className='flex items-center bg-green-500 rounded-[3px] text-white text-[14px] lg:text-[16px]'><FaStar className='text-white' /> {product.rating}</h1>
+              <h1 className='flex items-center w-[51px] bg-green-500 rounded-[3px] text-white text-[14px] lg:text-[16px]'><FaStar className='text-white' /> {product.rating}</h1>
               </div>
               <h1 className='line-through flex items-center text-[14px] lg:text-[16px]'><LiaRupeeSignSolid/> {product.price - ( product.price * (product.discountPercentage /100)).toFixed(2)}</h1>
             </div>

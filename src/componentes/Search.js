@@ -63,7 +63,7 @@ function Search() {
                        <div className='flex items-center justify-between'>
                        <h1 className='text-[14px] lg:text-[16px]' >Brand: {value.brand}</h1>
            
-                       <h1 className=' flex items-center bg-green-500 rounded-[3px] text-white text-[14px] lg:text-[16px]'><FaStar className='text-white' /> {value.rating}</h1>
+                       <h1 className=' flex items-center w-[51px] bg-green-500 rounded-[3px] text-white text-[14px] lg:text-[16px]'><FaStar className='text-white' /> {value.rating}</h1>
                        </div>
                        <div className='flex gap-2'>
                        <h1 className=' flex items-center text-[14px] lg:text-[16px]'>Price: <LiaRupeeSignSolid /> {value.price}</h1>

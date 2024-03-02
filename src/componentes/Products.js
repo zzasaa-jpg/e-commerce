@@ -59,7 +59,7 @@ function Products({ category }) {
               <h1>Brand: {product.brand.substring(0,18)+'...'}</h1>
               <div className='flex justify-between items-center'>
               <h1 className='flex items-center'>Price: <LiaRupeeSignSolid/> {product.price}</h1>
-              <h1 className='flex items-center bg-green-500 rounded-[3px] text-white'><FaStar className='text-white' /> {product.rating}</h1>
+              <h1 className='flex items-center w-[51px] bg-green-500 rounded-[3px] text-white'><FaStar className='text-white' /> {product.rating}</h1>
               </div>
               <h1 className='line-through flex items-center'><LiaRupeeSignSolid/> {product.price - ( product.price * (product.discountPercentage /100)).toFixed(2)}</h1>
             </div>

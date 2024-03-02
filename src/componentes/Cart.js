@@ -9,11 +9,11 @@ function Cart(value) {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal, totalItems } = useContext(CartContext);
   
   return (
-    <div className='pt-20 lg:pt-20 sm:flex md:flex md:gap-1 lg:flex w-screen bg-[#f2f1f7] h-screen p-2 lg:p-5 lg:gap-0'>
+    <div className='pt-20 w-screen lg:pt-20 sm:flex sm:gap-5 md:flex md:gap-10 lg:flex bg-[#f2f1f7] h-screen p-2 lg:p-5 lg:gap-0'>
         {
             cartItems.length > 0 ?(
 
-        <div className='bg-white sm:w-[400px] md:w-[500px] lg:w-[85vh] shadow-2xl rounded-[10px] h-[270px] p-3'>
+        <div className='bg-white w-auto sm:w-[400px] md:w-[500px] lg:w-[85vh] shadow-2xl rounded-[10px] h-[270px] p-3'>
           <h1 className='font-semibold py-2 text-[20px] '>Price Details</h1>
           <div className='p-'>
             
@@ -54,17 +54,17 @@ function Cart(value) {
        
 
 
-      <div className={`flex flex-col gap-1 lg:w-screen bg-blue-20 lg:p-2 lg:items-center
-      sm:overflow-x-scroll sm:w-full md:overflow-y-scroll md:w-[500px] lg:overflow-y-scroll ${cartItems.length === 0 ? 'hidden': 'w-screen'}`}>
+      <div className={`flex flex-col pt-1 gap-1 lg:w-screen bg-blue-20 lg:p-2 lg:items-center
+      sm:overflow-y-scroll sm:w-full md:overflow-y-scroll md:w-[500px] lg:overflow-y-scroll ${cartItems.length === 0 ? 'hidden': 'w-full'}`}>
         {
             cartItems.map((value)=>(
                 <>
                 
                <div className="">
 
-                <div className='bg-red-30 sm:w-[400px] lg:w-[800px] p-1 '>
-                <div className='flex-col bg-white rounded-[10px] shadow-2xl h-[370px] lg:h-40 sm:w-[400px] lg:w-full flex lg:items-center justify-between lg:px-1'>
-                  <div className='p-1 lg:flex items-start gap-3 lg:gap-4  '>
+                <div className=' w-auto sm:w-[400px] lg:w-[800px] '>
+                <div className='flex-col bg-white rounded-[10px] shadow-2xl h-[370px] w-auto lg:h-40 sm:w-[400px] lg:w-full flex lg:items-center justify-between lg:px-1'>
+                  <div className='p-1  lg:flex items-start gap-3 lg:gap-4  '>
                     <img src={value.thumbnail} alt='porduct' width={200} className='rounded-[10px] min-w-full h-[220px] lg:h-[150px] lg:min-w-[250px]'/>
                     <div>
                       <h1 className=' font-semibold'>Product Details~</h1>
@@ -72,7 +72,7 @@ function Cart(value) {
                       <div className='flex justify-between lg:w-[510px] items-start'>
       
                         <h1 className='text-[]' >Product {value.title}</h1>
-                        <h1 className='flex items-center bg-green-500 rounded-[3px] text-[13px] text-white'><FaStar className='text-white' /> {value.rating}</h1>
+                        <h1 className='flex items-center w-[42px] bg-green-500 rounded-[3px] text-[13px] text-white'><FaStar className='text-white' /> {value.rating}</h1>
                       </div>
                       <div className='flex gap-2'>
       

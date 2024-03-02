@@ -139,7 +139,7 @@ function Buy() {
                  lg:w-[510px] items-start'>
 
                   <h1 className='text-[]' >Product {product.title}</h1>
-                  <h1 className='flex items-center bg-green-500 rounded-[3px] text-[13px] text-white'><FaStar className='text-white' /> {product.rating}</h1>
+                  <h1 className='flex items-center w-[42px] bg-green-500 rounded-[3px] text-[13px] text-white'><FaStar className='text-white' /> {product.rating}</h1>
                 </div>
                 <div className='flex gap-2'>
 
