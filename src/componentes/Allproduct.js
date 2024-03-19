@@ -11,8 +11,7 @@ function AllProducts() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { addToCart } = useContext(CartContext);
-
+  const { addToCart} = useContext(CartContext);
   
   useEffect(() => {
     const fetchProducts = () => {

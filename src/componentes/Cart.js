@@ -7,7 +7,7 @@ import { CiShoppingCart } from "react-icons/ci";
 function Cart(value) {
   const Delivery_charges = 99.09
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal, totalItems } = useContext(CartContext);
-  
+
   return (
     <div className='pt-20 w-screen lg:pt-20 sm:flex sm:gap-5 md:flex md:gap-10 lg:flex bg-[#f2f1f7] h-screen p-2 lg:p-5 lg:gap-0'>
         {

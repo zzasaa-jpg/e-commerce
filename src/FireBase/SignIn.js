@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import app from './Firebase';
 import { useNavigate } from 'react-router-dom';
@@ -37,7 +37,7 @@ function SignIn() {
 
             // The signed-in user info
             const user = userCredential.user;
-            console.log(user);
+            console.log(user[0]);
             localStorage.setItem("isSignIn", true);
             navigate('/app');
         } catch (error) {
@@ -86,6 +86,12 @@ function SignIn() {
     const handleShow = () => {
         setShow(!show)
     }
+
+    useEffect(()=>{
+        toast.info('Use the Dummy Email & Password.', {
+            theme: 'colored'
+        })
+    },[])
 
     return (
         <div className='flex flex-col justify-center items-center h-screen p-2 bg-[#f2f1f7]'>
