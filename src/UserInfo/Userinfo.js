@@ -24,9 +24,7 @@ function Userinfo() {
         }, [auth]);
         const handleSignOut = async () => {
             try {
-                console.log("Attempting sign-out...");
                 await signOut(auth);
-                console.log("Sign-out successful!");
                 navigate('/')
                 localStorage.removeItem("isSignIn");
             } catch (error) {
