@@ -97,7 +97,7 @@ function GoogleAuthentication() {
 
             // The signed-in user info
             const user = userCredential.user;
-            console.log(user);
+            console.log(user[0]);
             localStorage.setItem("isSignIn", true);
             navigate('/app');
         } catch (error) {
