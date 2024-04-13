@@ -8,7 +8,7 @@ import Buy from './componentes/Buy';
 import Cart from './componentes/Cart'
 import { ShopContextProvider } from './context/Shop_context';
 import Search from './componentes/Search';
-import GoogleAuthentication from './FireBase/GoogleAuthentication ';
+import GoogleAuthentication from './FireBase/GoogleAuthentication';
 import Userinfo from './UserInfo/Userinfo';
 import PrivateRoute from './componentes/Private';
 import SignIn from './FireBase/SignIn';
