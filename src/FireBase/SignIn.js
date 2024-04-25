@@ -101,10 +101,10 @@ function SignIn() {
                 <Typewriter
                     onInit={(typewriter) => {
                         typewriter
-                            .typeString("Welcome to movie website.")
+                            .typeString("Welcome to Shop Now")
                             .pauseFor(1000)
                             .deleteAll()
-                            .typeString("Best movie platform.")
+                            .typeString("Best e-commerce platform")
                             .start();
                     }}
                 />
